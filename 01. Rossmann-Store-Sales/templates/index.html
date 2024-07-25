@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sales Prediction</title>
+  </head>
+  <body>
+    <h2>Sales Prediction</h2>
+    <form action="/predict" method="post">
+      Store: <input type="text" name="Store" ><br>
+      Year: <input type="text" name="Year" ><br>
+      Month: <input type="text" name="Month" ><br>
+      Day: <input type="text" name="Day" ><br >
+      Promo: <input type="text" name="Promo" ><br>
+      WeekOfYear: <input type="text" name="WeekOfYear"><br>
+      DayOfWeek: <input type="text" name="DayOfWeek"><br>
+      <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+    <h3>{{ prediction_text }}</h3>
+    {% endif %}
+  </body>
+</html>
